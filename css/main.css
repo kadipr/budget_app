@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: rgb(20, 72, 77);
+    --secondary-color: rgb(211, 242, 245);
+}
+
+html {
+    font-family: Lato, 'sans-serif';
+}
+
+.money {
+    display: flex;
+    height: 150px;
+    border-radius: 0 0 15px 15px;
+    font-size: 1.5rem;
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+    .money {
+        flex-direction: column; 
+        height: 300px;
+    }
+}
+
+.money > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.money span {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+
+/* 
+----------------------
+Adding income/expenses 
+----------------------
+*/
+
+.adding {
+    height: 200px;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.adding h3 {
+    padding: 45px 0;
+    text-transform: uppercase;
+    color: var(--main-color)
+}
+
+.adding > div {
+    display: flex;
+}
+
+.adding input,
+.adding select {
+    flex-basis: 25%;
+    margin-right: 10px;
+    height: 30px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.adding input:focus {
+    outline: none;
+}
+
+.adding button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .adding {
+        height: 230px;
+    }
+    .adding > div { 
+        flex-wrap: wrap;
+    }
+
+    .adding input,
+    .adding select {
+        flex-basis:47%;
+        margin-bottom: 5px;
+    } 
+
+    .adding input[type="date"] {
+        flex-basis: calc(47% - 40px);
+    }
+}
+
+@media (max-width: 576px) {
+    .adding {
+        height: 310px;
+    }
+
+    .adding input,
+    .adding select {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    } 
+
+    .adding input[type="date"] {
+        flex-basis: calc(100% - 50px);
+    }
+}
+
+/* 
+-------------------------
+Display income / expenses 
+-------------------------
+*/
+
+.list {
+    display: flex;
+    border-radius: 15px 15px 0 0;
+    background-color: var(--secondary-color);
+    min-height: calc(100vh - 350px);
+}
+
+.list > * {
+    flex-basis: 50%;
+    margin: 30px 5vw;
+}
+
+.income-list {
+    padding-right: 100px;
+}
+
+.expenses-list {
+    padding-left: 100px;
+}
+
+@media (max-width: 768px) {
+    .list {
+        min-height: calc(100vh - 380px);
+    }
+
+    .income-list {
+        padding-right: 50px;
+    }
+
+    .expenses-list {
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .list {
+        min-height: calc(100vh - 610px);
+        flex-direction: column;
+    }
+
+    .income-list {
+        padding-right: 0;
+    }
+
+    .expenses-list {
+        padding-left: 0;
+    }
+}
+
+.list h3 {
+    text-transform: uppercase;
+    color: var(--main-color);
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.list-element {
+    display: flex;
+}
+
+.list-element > span {
+    display: block;
+    text-transform: uppercase;
+    padding-right: 5px;
+}
+
+.price {
+    font-weight: bold;
+    flex-basis: 100px;
+    color:rgb(20, 72, 77);
+}
+
+.add-what {
+    font-weight: bold;
+}
+
+.add-when {
+    color: gray;
+}
+
+.delete {
+    margin-left: auto;
+    padding-right: 0px;
+}
