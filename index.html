@@ -11,50 +11,42 @@
     <div class="money">
         <div class="balance">
             <span>balance</span>
-            <span>$ <span class="amount"> 999</span></span>
+            <span>$ <span class="amount balance-amount"> </span></span>
         </div>
 
         <div class="income">
             <span>income</span>
-            <span>$ <span class="amount"> 1000</span></span>
+            <span>$ <span class="amount income-amount"> </span></span>
         </div>
 
         <div class="expenses">
             <span>expenses</span>
-            <span>$ <span class="amount"> 1</span></span>
+            <span>$ <span class="amount expenses-amount"> </span></span>
         </div>
     </div>
 
     <div class="adding">
         <h3>add income/expenses</h3>
         <div>
-            <input type="text" placeholder="Add title">
-            <input type="text" placeholder="Amount">
-            <select name="income_expenses" id="income_expenses_select">
+            <input type="text" placeholder="Add title" class="title-input" value="">
+            <input type="text" placeholder="Amount" class="amount-input">
+            <select name="income-expenses" id="income-expenses-select">
                 <option value="">Income / Expenses</option>
                 <option value="income">Income</option>
                 <option value="expenses">Expenses</option>
             </select>
-            <input type="date">
-            <button>+</button>
+            <input type="date" class="date-input">
+            <button class="add-btn">+</button>
         </div>
     </div>
 
     <div class="list">
         <div class="income-list">
             <h3>income</h3>
-
-            <div class="list-element">
-                <span class="price">1</span><span class="add-what">What </span><span class="add-when">(When) </span><span class="delete">x</span>
-            </div>
         </div>
 
         <div class="expenses-list">
             <h3>expenses</h3>
-
-            <div class="list-element">
-                <span class="price">1</span><span class="add-what">What </span><span class="add-when">(When) </span><span class="delete">x</span>
-            </div>
         </div>
     </div>
 
